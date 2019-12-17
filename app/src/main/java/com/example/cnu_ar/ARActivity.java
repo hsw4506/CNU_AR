@@ -224,6 +224,7 @@ public class ARActivity extends FragmentActivity implements OnMapReadyCallback {
 
         // GPS와 카메라의 권한이 없을 경우 요청한다.
         ARLocationPermissionHelper.requestPermission(this);
+        Toast toast = Toast.makeText(getApplicationContext(), "지도에 보이는 빨간선이 시작되는 곳으로 이동해 주세요", Toast.LENGTH_LONG);
     }
 
     private Node getView() {

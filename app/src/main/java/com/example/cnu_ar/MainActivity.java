@@ -12,6 +12,7 @@ import com.google.firebase.database.ValueEventListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import uk.co.appoly.arcorelocation.utils.ARLocationPermissionHelper;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity{
 
         settingList();
         mapping();
+
+        ARLocationPermissionHelper.requestPermission(this);
 
         map.setOnClickListener(new EditText.OnClickListener(){
             @Override
